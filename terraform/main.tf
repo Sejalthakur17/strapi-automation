@@ -20,7 +20,7 @@ data "aws_ami" "ubuntu" {
 # -----------------------------------
 # Security Group
 # -----------------------------------
-resource "aws_security_group" "strapi_sg" {
+resource "aws_security_group" "strapi_sg2" {
   name        = "task6-strapi-sg2"
   description = "Allow SSH and Strapi access"
 
@@ -48,7 +48,7 @@ resource "aws_security_group" "strapi_sg" {
   }
 
   tags = {
-    Name = "task6-strapi-sg"
+    Name = "task6-strapi-sg2"
   }
 }
 
