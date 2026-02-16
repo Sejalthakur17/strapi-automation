@@ -20,8 +20,8 @@ data "aws_ami" "ubuntu" {
 # -----------------------------------
 # Security Group
 # -----------------------------------
-resource "aws_security_group" "strapi_sg2" {
-  name        = "task6-strapi-sg2"
+resource "aws_security_group" "strapi_sg7" {
+  name        = "task6-strapi-sg7"
   description = "Allow SSH and Strapi access"
 
   ingress {
@@ -48,7 +48,7 @@ resource "aws_security_group" "strapi_sg2" {
   }
 
   tags = {
-    Name = "task6-strapi-sg2"
+    Name = "task6-strapi-sg7"
   }
 }
 
@@ -58,7 +58,7 @@ resource "aws_security_group" "strapi_sg2" {
 resource "aws_instance" "strapi" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.strapi_sg2.id]
+  vpc_security_group_ids = [aws_security_group.strapi_sg7.id]
 
   tags = {
     Name = "strapi-automation"
