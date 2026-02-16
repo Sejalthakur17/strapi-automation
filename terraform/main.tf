@@ -1,5 +1,5 @@
 resource "aws_security_group" "strapi_sg" {
-  name = "task6-strapi-sg"
+  name = "task6-strapi-sg2"
 
   ingress {
     from_port   = 22
