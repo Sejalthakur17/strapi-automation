@@ -58,7 +58,7 @@ resource "aws_security_group" "strapi_sg2" {
 resource "aws_instance" "strapi" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.strapi_sg.id]
+  vpc_security_group_ids = [aws_security_group.strapi_sg2.id]
 
   tags = {
     Name = "strapi-automation"
