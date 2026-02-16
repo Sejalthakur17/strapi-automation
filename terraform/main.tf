@@ -26,7 +26,7 @@ resource "aws_security_group" "strapi_sg" {
 resource "aws_instance" "strapi" {
   ami           = "ami-0f5ee92e2d63afc18"
   instance_type = "t2.micro"
-  key_name      = "your-key-name"
+  key_name      = "sejal-key"
 
   security_groups = [aws_security_group.strapi_sg.name]
 
