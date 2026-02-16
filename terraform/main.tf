@@ -21,7 +21,7 @@ data "aws_ami" "ubuntu" {
 # Security Group
 # -----------------------------------
 resource "aws_security_group" "strapi_sg" {
-  name        = "task6-strapi-sg"
+  name        = "task6-strapi-sg2"
   description = "Allow SSH and Strapi access"
 
   ingress {
